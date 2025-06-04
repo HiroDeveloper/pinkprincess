@@ -5,6 +5,14 @@
   <title>Servicio Suspendido</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --primary-color: #e53935;
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,76 +20,75 @@
     }
 
     body {
-      background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
-      color: #f0f0f0;
+      background: linear-gradient(135deg, #ececec, #dcdcdc);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      color: var(--text-color);
     }
 
-    .container {
-      background-color: #202020;
-      padding: 60px 40px;
+    .card {
+      background-color: var(--card-bg);
+      padding: 50px 40px;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.25);
+      box-shadow: var(--shadow);
+      max-width: 480px;
+      width: 100%;
       text-align: center;
-      max-width: 520px;
-      border: 1px solid #ff3b3b;
+      border-top: 6px solid var(--primary-color);
     }
 
-    h1 {
-      font-size: 32px;
+    .card h1 {
+      font-size: 28px;
+      color: var(--primary-color);
       margin-bottom: 20px;
-      color: #ff3b3b;
-      letter-spacing: 1px;
     }
 
-    p {
-      font-size: 18px;
-      color: #cccccc;
-      margin-bottom: 40px;
+    .card p {
+      font-size: 17px;
       line-height: 1.6;
+      color: #555;
+      margin-bottom: 40px;
     }
 
-    .button-disabled {
+    .btn-disabled {
       display: inline-block;
-      padding: 14px 34px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #ff3b3b;
+      padding: 14px 30px;
+      background-color: var(--primary-color);
       color: #fff;
       border: none;
       border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
       cursor: not-allowed;
-      opacity: 0.85;
       user-select: none;
       transition: background-color 0.3s ease;
     }
 
-    .button-disabled:hover {
-      background-color: #e02e2e;
+    .btn-disabled:hover {
+      background-color: #d32f2f;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 13px;
-      color: #777;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>⚠ SERVICIO SUSPENDIDO</h1>
+  <div class="card">
+    <h1>Servicio suspendido</h1>
     <p>
-      Este sitio ha sido temporalmente desactivado debido a la falta de pago.<br>
-      Para reactivar el servicio, por favor contacte al administrador.
+      El acceso a este sitio ha sido deshabilitado temporalmente por vencimiento de la suscripción.<br>
+      Por favor, contacte al administrador para resolver esta situación y reactivar el servicio.
     </p>
-    <div class="button-disabled">CONTACTA</div>
+    <div class="btn-disabled">CONTACTA</div>
     <div class="footer">
-      Administrado por Soporte Técnico - Todos los derechos reservados.
+      Soporte Técnico – Gestión de Servicios Web
     </div>
   </div>
 </body>
